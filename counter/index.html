@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <style>
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .btns {
+        display: flex;
+        gap: 5px;
+      }
+      .count {
+        font-size: 80px;
+      }
+      .btn {
+        width: 100px;
+        border-radius: 5px;
+        border: 2px solid black;
+      }
+      .btn:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1 class="heading">Counter</h1>
+      <div class="count">0</div>
+      <div class="btns">
+        <div class="btn" id="dc">Decrease</div>
+        <div class="btn" id="rs">Reset</div>
+        <div class="btn" id="in">Increase</div>
+      </div>
+    </div>
+    <script>
+      let countbox = document.querySelector(".count");
+      let inc = document.querySelector("#in");
+      let rst = document.querySelector("#rs");
+      let dsc = document.querySelector("#dc");
+      let count = parseInt(countbox.innerHTML);
+      function updateCount() {
+        countbox.innerHTML = count;
+        if (count === 0) {
+          countbox.style.color = "black";
+        } else if (count > 0) {
+          countbox.style.color = "green";
+        } else {
+          countbox.style.color = "red";
+        }
+      }
+      inc.addEventListener("click", () => {
+        count++;
+        updateCount()
+        //console.log(count);
+      });
+      dsc.addEventListener("click", () => {
+        count--;
+        updateCount()
+        //console.log(count);
+      });
+      rst.addEventListener("click", () => {
+        count = 0;
+        updateCount()
+        //console.log(count);
+      });
+    </script>
+  </body>
+</html>

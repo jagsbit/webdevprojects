@@ -1,0 +1,73 @@
+body{
+    background: linear-gradient(to left,blue,skyblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 100v;
+    height: 100%;
+    padding: 20px;
+
+
+
+}
+.container>input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: gainsboro;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 8px;
+}
+.container>button{
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    height: 2rem;
+    width: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container>button:hover{
+    background-color: orange;
+    color: black;
+}
+.todolist ul li{
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+.todolist ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url("unchecked.png");
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    left: 0px;
+}
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.todolist ul li.checked::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url("checked.png");
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    left: 0px;
+}

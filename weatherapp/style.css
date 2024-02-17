@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(71, 68, 68);
+}
+.card{
+    margin-top: 35px;
+    background: linear-gradient(to right,skyblue,green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 40px;
+
+}
+.input{
+    
+    display: flex;
+    gap: 2rem;
+}
+.input >input{
+    width: 15rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+}
+.input>button{
+    border-radius: 50%;
+    border: none;
+    width: 2.5rem;
+}
+.search{
+    width: 1rem;
+    
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+.weather-icon{
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 0px;
+}
+.details{
+    display: flex;
+    gap: 7rem;
+}
+.col{
+    display: flex;
+}
+.col>img{
+   
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 5px;
+
+}
+.weather,.details{
+     display: none;
+}
+ 

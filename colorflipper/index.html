@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin-top: 190px;
+               gap: 20px;
+
+        }
+        .name{
+            width: 250px;
+            background-color: black;
+            color: white;
+            font-size: larger;
+            padding: 10px;
+            border-radius: 2px;
+        }
+        .click{
+            width: 100px;
+            color: black;
+            border-radius: 5px;
+        }
+        .click:hover{
+             background-color: black;
+             color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <div class="box">
+             <div class="name">Background-color:#FFFFFF</div>
+             <button class="click" id="start">start</button>
+             <button class="click" id="stop">stop</button>
+        </div>
+        <script>
+               let name=document.querySelector('.name');
+               let btn=document.querySelector('#start') 
+               let stop=document.querySelector('#stop') 
+               let hex="0123456789ABCDEF"
+               let color="#"
+                let work;
+               btn.addEventListener('click',()=>{
+                  work= setInterval(() => {
+                      for(let i=0;i<6;i++){
+                        color+=hex[Math.round(Math.random()*15)]
+                      }
+                    console.log(color)
+                    document.body.style.backgroundColor=color;
+                    name.innerHTML=`Background-color:${color}`
+                    color="#"
+                   }, 2000);
+                    
+               })
+               stop.addEventListener('click',()=>{
+                    clearInterval(work)
+               })
+              
+        </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color:peachpuff;
+    
+}
+.tit{
+   width: 20rem;
+   height: 1.5rem;
+   text-align: center;
+   border: 1.5px solid black;
+   border-radius: 5px;
+}
+.todo{
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    border: 1.5px solid black;
+    border-radius: 6px;
+}
+.ct{
+    width: 6rem;
+    height: 2rem;
+    background-color:green;
+    color: whitesmoke;
+    border: none;
+    border-radius: 1.5px;
+}
+.ct:hover{
+   background-color: rgb(116, 171, 34);
+}
+.todolist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    width: 15rem;
+    height: 10rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: white;
+    padding-top: 8px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 10px;
+}
+.box>button{
+    background-color: red;
+    color: white;
+    width: 3.5rem;
+    height: 2rem;
+    border: none;
+    justify-self: flex-end;
+}
+.box>button:hover{
+    background-color: rgb(226, 163, 47);
+    color: black;
+}
+@media(max-width:700px){
+    .todolist{
+        flex-direction: column;
+    }
+}

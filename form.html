@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job form</title>
+    <style>
+        body{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(191, 188, 188);
+        }
+        .container{
+            width: 600px;
+            height: 500px;
+            display: flex;
+            position: relative;
+            top: 150px;
+            background-color: white;
+            border-radius: 10px;
+            
+            flex-direction: column;
+            
+          
+        }
+        #item1>p{
+            font-size: 30px;
+        }
+        input{
+             font-size: 16px;
+             width: 200px;
+        }
+        select{
+            font-size: 16px;
+            width: 200px;
+        }
+        textarea{
+           width: 580px;
+            font-size: 15px;
+        }
+        .item{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 180px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            justify-content: center;
+            
+        }
+        .formbody{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            
+        }
+        
+        button{
+            width: 120px;
+            height: 30px;
+            background-color: orange;
+            border-radius: 5px;
+            color: white;
+            border: none;
+        }
+        #item7{
+          
+          justify-self: end;
+          align-self: flex-end;
+        }
+      @media(max-width:610px){
+          .container{
+              height: max-content;
+              justify-content: center;
+              position: relative;
+              top: 250px;
+              align-items: center;
+          }
+          .item{
+            gap: 10px;
+            flex-direction: column;
+            
+          }
+          textarea{
+           width: 200px;
+           border: 1px solid black;
+            font-size: 15px;
+        }
+      }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="item" id="item1">
+            <p>Job application(web)</p>
+           
+            
+        </div>
+        <div class="item" id="item2">
+            
+                  <div class="formbody">
+                    first name
+               
+                    <input type="text" placeholder="Enter first name">
+                  </div>
+                  <div class="formbody">
+                    second name
+                
+                    <input type="text" name="" id="" placeholder="Enter second name">
+                  </div>
+              
+            
+        </div>
+        <div class="item" id="item3">
+            <div class="formbody">
+                Email
+                <input type="email" placeholder="Enter your email">
+              </div>
+              <div class="formbody">
+                second name
+            
+                <select name="cars" id="cars">
+                    <option value="volvo">Select Job role</option>
+                    <option value="saab">frontend developer</option>
+                    <option value="mercedes">Backend java developer</option>
+                    <option value="audi">Full stack developer</option>
+                    <option value="ux">Ux/Ui developer</option>
+                  </select>
+              </div>
+        </div>
+        <div class="item" id="item4">
+            <div class="formbody">
+                first name
+           
+                <textarea name="" id="" cols="67" rows="3" placeholder="Enter your address"></textarea>
+              </div>
+        </div>
+        <div class="item" id="item5">
+            <div class="formbody">
+                 city
+           
+                <input type="text" placeholder="Enter first name">
+              </div>
+              <div class="formbody">
+                pincode
+            
+                <input type="text" name="" id="" placeholder="Enter second name">
+              </div>
+        </div>
+        <div class="item" id="item6">
+            <div class="formbody">
+                 date
+           
+                <input type="date">
+              </div>
+              <div class="formbody">
+                upload your cv
+            
+                <input type="text" name="" id="" placeholder="Enter second name">
+              </div>
+        </div>
+        <div class="item" id="item7">
+           <div class="btn">
+            <button>apply now</button>
+           </div>
+        </div>
+    </div>
+   
+</body>
+</html>
